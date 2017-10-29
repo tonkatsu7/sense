@@ -15,6 +15,7 @@ public interface TweetParser {
         String twitterHandleFieldName = "\"screen_name\":\"";
         int indexOfTwitterHandleField = fullTweet.indexOf(twitterHandleFieldName)+ twitterHandleFieldName.length();
         int indexOfEndOfTwitterHandle = fullTweet.indexOf("\"", indexOfTwitterHandleField);
+//        System.out.println(">" + fullTweet.substring(indexOfTwitterHandleField, indexOfEndOfTwitterHandle));
         return fullTweet.substring(indexOfTwitterHandleField, indexOfEndOfTwitterHandle);
     }
 }
